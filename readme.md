@@ -31,9 +31,9 @@ If you don't have the touch command, just create an empty file `target/reactive/
 
 ## Demo scenarios
 
-The relevant code is in FactorialResource.java. It contains several methods, each of them demonstrates a different case. Each method is exposed as a REST resource so that it's easy to trigger and observe the behavior.
+The relevant code is in [FactorialResource.java](src/main/java/payara/reactive/FactorialResource.java). It contains several methods, each of them demonstrates a different case. Each method is exposed as a REST resource so that it's easy to trigger and observe the behavior.
 
-To demonstrate that reactive programming reduces thread blocking which leads to smaller thread usage, the demo limits the size of the HTTP request thread pool to 5. So only 5 threads are available to process all requests. This is configured using the file [config/small-thread-pool.asadmin](config/small-thread-pool.asadmin) which is added to Payara Micro in pom.xml configuration using the --prebootcommandfile startup option.
+To demonstrate that reactive programming reduces thread blocking which leads to smaller thread usage, the demo limits the size of the HTTP request thread pool to 5. So only 5 threads are available to process all requests. This is configured using the file [config/small-thread-pool.asadmin](config/small-thread-pool.asadmin) which is added to Payara Micro in [pom.xml](pom.xml) configuration using the --prebootcommandfile startup option.
 
 ### Method computeFactorial: Blocking thread pool with non-reactive code
 
