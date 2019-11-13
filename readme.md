@@ -1,10 +1,12 @@
-# A demo application showcasing MicroProfile reactive APIs 
+# A demo application showcasing MicroProfile reactive APIs with Payara
 
 ## Introduction
 
 This is a simple REST application that demonstrates how to write reactive applications with MicroProfile.
 
-More information on MicroProfile can be found [here](https://microprofile.io/)
+More information about MicroProfile can be found at https://microprofile.io/
+
+More information about Payara Micro (an opensource MicroProfile runtime) can be found at https://payara.fish/
 
 ## How to build and run the application
 
@@ -14,7 +16,7 @@ Build using Maven with:
 mvn clean package
 ```
 
-Run using Maven with:
+Run using Maven with using Payara Micro Maven plugin:
 
 ```
 mvn payara-micro:start
@@ -27,7 +29,7 @@ mvn resources:resources compiler:compile war:exploded
 touch target/reactive/.reload
 ```
 
-If you don't have the touch command, just create an empty file `target/reactive/.reload` to reload the app.
+If you don't have the `touch` command, just create an empty file `target/reactive/.reload` to reload the app.
 
 ## Demo scenarios
 
