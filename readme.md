@@ -23,8 +23,11 @@ mvn payara-micro:start
 Redeploy after code changes (keep app running):
 
 ```
-mvn -DskipTests=true -T 3 resources:resources compiler:compile war:exploded payara-micro:stop payara-micro:start
+mvn resources:resources compiler:compile war:exploded
+touch target/reactive/.reload
 ```
+
+If you don't have the touch command, just create an empty file `target/reactive/.reload` to reload the app.
 
 ## Demo scenarios
 
